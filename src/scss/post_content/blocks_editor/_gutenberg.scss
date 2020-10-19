@@ -1,0 +1,76 @@
+// 全体の幅
+.wp-block {
+    // max-width: 900px;
+    max-width: var(--ark-block_width, 900px);
+
+    &[data-align="wide"] {
+        max-width: calc(var(--ark-block_width, 900px) + 160px);
+    }
+}
+
+[data-align="wide"] {
+
+    & > .wp-block-cover > .wp-block-cover__inner-container,
+    & > .wp-block-group > .wp-block-group__inner-container {
+
+        & > .wp-block {
+            max-width: 100%;
+        }
+    }
+}
+
+
+// フォント
+.block-editor .editor-styles-wrapper {
+    color: var(--ark-color_text);
+    font-size: var(--ark-font_size, 16px);
+    font-family: var(--ark-font_family);
+    background-color: var(--ark-color_bg);
+}
+
+.editor-post-title .editor-post-title__input {
+    font-size: 2rem;
+}
+
+// 本文エリア
+.block-editor-writing-flow {
+
+    // padding大きく
+    [data-align="full"] {
+
+        & > .wp-block-cover,
+        & > .wp-block-group {
+            padding: 4em 48px;
+        }
+    }
+}
+
+//aligncenterにclearが付くようになったので、それに合わせる
+[data-align="center"] {
+    clear: both;
+}
+
+
+// ブロックの「Move To」モードで出てくる ::before のバーが崩れないように、CSS強める
+#wpbody .is-block-moving-mode {
+
+    .wp-block.is-selected {
+
+        &::before {
+            position: absolute;
+            top: -14px;
+            right: 0;
+            bottom: auto;
+            left: 0;
+            z-index: 0;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            border: none;
+            border-top: 4px solid var(--wp-admin-theme-color);
+            border-radius: 2px;
+            transform: none;
+            content: "";
+        }
+    }
+}

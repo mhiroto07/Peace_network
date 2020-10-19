@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// mixin
+@import "../foundation/mixin/**";
+
+// setting
+@import "../foundation/setting/variable";
+
+// utility
+@import "object/utility/**";
+
+// icon
+// @import "../foundation/icon/icomoon";
+// @font-face {
+//     font-weight: normal;
+//     font-family: arkhe-icon;
+//     font-style: normal;
+//     src:
+//         url(../../../assets/fonts/icomoon.woff2?7d811) format("woff2"),
+//         url(../../../assets/fonts/icomoon.ttf?7d811) format("truetype"),
+//         url(../../../assets/fonts/icomoon.woff?7d811) format("woff"),
+//         url(../../../assets/fonts/icomoon.svg?7d811#icomoon) format("svg");
+// }
+
+
+// 投稿一覧の「クラシックエディター」などの文字を小さく薄く表示
+table.wp-list-table .post-state {
+    color: #666;
+    font-size: 11px;
+}
+
+// Macの 新OSで見るとチェックボックスが青くつぶれるのを阻止
+// input[type=radio],
+//.customize-control input[type=checkbox]
+// input[type="checkbox"] {
+//     -webkit-appearance: none !important;
+// }

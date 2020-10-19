@@ -1,0 +1,1 @@
+"use strict";!function(i){wp.customize.bind("ready",function(){function o(e){"off"!==e?i(".customize-control.-header-overlay").removeClass("-hide"):i(".customize-control.-header-overlay").addClass("-hide")}wp.customize("arkhe_settings[header_overlay]",function(e){o(e.get()),e.bind(function(e){o(e)})})})}(window.jQuery);

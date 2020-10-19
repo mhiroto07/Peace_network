@@ -1,0 +1,15 @@
+/**
+ * サイドバー用のスタイル
+ */
+
+.edit-post-sidebar {
+    // 5.3からinline-blockに急に切り替わったのでblockに上書き
+    .components-base-control__label {
+        display: block;
+    }
+
+    // カラーパレットの 透明パターンの背景柄を非表示
+    .components-circular-option-picker__option-wrapper::before {
+        background: none;
+    }
+}
